@@ -22,4 +22,17 @@ class Controller
         $this->view->display($template);
     }
 
+    public function notFoundPage(string $message = 'Not found'): void
+    {
+        $this->errorPage('errors/404.tpl', 404, $message);
+    }
+
+    protected function errorPage(string $template, int $code, string $message): void
+    {
+        http_response_code($code);
+        $this->render($template, [
+            'code'    => $code,
+            'message' => $message
+        ]);
+    }
 }

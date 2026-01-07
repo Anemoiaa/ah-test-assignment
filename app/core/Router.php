@@ -56,5 +56,8 @@ class Router
                 return;
             }
         }
+
+        $defaultController = new Controller($this->view);
+        $defaultController->notFoundPage();
     }
 }
