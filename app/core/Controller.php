@@ -25,6 +25,7 @@ class Controller
         }
 
         $this->view->display($template, $cacheId);
+        exit();
     }
 
     protected function errorPage(string $template, int $code, string $message): void
