@@ -32,8 +32,8 @@ class Application
     {
         $smarty = new Smarty();
         $smarty->setTemplateDir(__DIR__ . '/../../resources/views');
-        $smarty->setCompileDir(__DIR__ . '/../../storage/compile');
-        $smarty->setCacheDir(__DIR__ . '/../../storage/cache');
+        $smarty->setCompileDir(__DIR__ . '/../../storage/smarty/compile');
+        $smarty->setCacheDir(__DIR__ . '/../../storage/smarty/cache');
 
         $smarty->setEscapeHtml(true);
 
