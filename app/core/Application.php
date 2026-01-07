@@ -34,7 +34,8 @@ class Application
         $smarty->setTemplateDir(__DIR__ . '/../../resources/views');
         $smarty->setCompileDir(__DIR__ . '/../../storage/compile');
         $smarty->setCacheDir(__DIR__ . '/../../storage/cache');
-        $smarty->escape_html = true;
+
+        $smarty->setEscapeHtml(true);
 
         return $smarty;
     }
