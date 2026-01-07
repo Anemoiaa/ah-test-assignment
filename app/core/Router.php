@@ -2,14 +2,13 @@
 
 namespace Anemoiaa\AhTestAssignment\core;
 
-use Anemoiaa\AhTestAssignment\controllers\HomeController;
 use RuntimeException;
 use Smarty\Smarty;
 
 class Router
 {
     private array $routes = [
-        'GET' => [],
+        'GET'  => [],
         'POST' => [],
     ];
 

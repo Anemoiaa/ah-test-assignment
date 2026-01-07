@@ -11,7 +11,7 @@ class Application
 
     public function __construct()
     {
-        $this->view   = $this->initSmarty();
+        $this->view = $this->initSmarty();
         $this->router = new Router($this->view);
     }
 

@@ -32,7 +32,7 @@ class Controller
         http_response_code($code);
         $this->render($template, [
             'code'    => $code,
-            'message' => $message
+            'message' => $message,
         ]);
     }
 }
