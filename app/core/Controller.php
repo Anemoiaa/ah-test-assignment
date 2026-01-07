@@ -13,18 +13,18 @@ class Controller
         $this->view = $view;
     }
 
-    protected function render(string $template, array $params = []): void
+    public function notFoundPage(string $message = 'Not found'): void
+    {
+        $this->errorPage('errors/404.tpl', 404, $message);
+    }
+
+    protected function render(string $template, array $params = [], ?string $cacheId= null): void
     {
         foreach ($params as $key => $value) {
             $this->view->assign($key, $value);
         }
 
-        $this->view->display($template);
-    }
-
-    public function notFoundPage(string $message = 'Not found'): void
-    {
-        $this->errorPage('errors/404.tpl', 404, $message);
+        $this->view->display($template, $cacheId);
     }
 
     protected function errorPage(string $template, int $code, string $message): void
