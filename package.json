@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "sass source/stylesheets/main.scss public/assets/css/main.css",
+    "watch": "sass --watch resources/scss/main.scss:public/assets/css/main.css"
+  },
+
+  "dependencies": {
+    "sass": "^1.97.1"
+  }
+}
