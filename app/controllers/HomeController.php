@@ -54,7 +54,7 @@ class HomeController extends Controller
         }
 
         $this->render($template, [
-            'categories' => $grouped
+            'categories' => $grouped,
         ]);
     }
 }

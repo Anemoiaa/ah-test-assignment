@@ -18,7 +18,7 @@ class Controller
         $this->errorPage('errors/404.tpl', 404, $message);
     }
 
-    protected function render(string $template, array $params = [], ?string $cacheId= null): void
+    protected function render(string $template, array $params = [], ?string $cacheId = null): void
     {
         foreach ($params as $key => $value) {
             $this->view->assign($key, $value);
