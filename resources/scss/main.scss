@@ -118,3 +118,38 @@ body {
     }
   }
 }
+
+.post {
+  margin-bottom: 96px;
+
+  &__meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    float: left;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 24px 16px 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  &__content {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
